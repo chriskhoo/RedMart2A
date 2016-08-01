@@ -1,0 +1,18 @@
+<% provide(:title, 'All products') %>
+<h1>All products</h1>
+
+<%= will_paginate %>
+
+<ul class="products">
+  <% @products.each do |product| %>
+    <li>
+      Category:     <%= link_to product.category.name, product.category %>
+      &nbsp; | &nbsp;
+      Product name: <%= product.name %>
+      &nbsp; &nbsp; | &nbsp; &nbsp;
+      <%= link_to "delete", product, method: :delete, data: { confirm: "You sure?" } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

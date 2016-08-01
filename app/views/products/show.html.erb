@@ -1,0 +1,12 @@
+<% provide(:title, @product.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="product_info">
+      <h1>
+        <%= link_to @product.category.name, @product.category %>
+        &nbsp; | &nbsp;
+        <%= @product.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
